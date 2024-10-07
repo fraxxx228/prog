@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Montserrat Alternates Medium';
+    src: url('../fonts/MontserratAlternates-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+$font-medium: 'Montserrat Alternates Medium', sans-serif;
+@font-face {
+    font-family: 'Montserrat Alternates Bold';
+    src: url('../fonts/MontserratAlternates-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+$font-bold: 'Montserrat Alternates Bold', sans-serif;
+@font-face {
+    font-family: 'Montserrat Alternates Black';
+    src: url('../fonts/MontserratAlternates-Black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}
+$font-black: 'Montserrat Alternates Black', sans-serif;

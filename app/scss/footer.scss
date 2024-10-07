@@ -1,0 +1,100 @@
+.footer {
+    &__wrapper {
+       padding-top: 10px;
+       padding-bottom: 15px;
+       background: $black; 
+    }
+    &__content {
+        @include flex(space-between, center, row);
+        max-width: $max-width;;
+        margin: 0 auto;
+        @include tablet {
+            flex-direction: column;
+            align-items: center
+        }
+        &_copyright {
+            @include flex(center, flex-start, column);
+            @include tablet {
+                align-items: center
+            }
+        }
+        &_contacts {
+            @include flex(space-between, flex-end, column);
+            @include tablet {
+                align-items: center
+            }
+        }
+    }
+
+    svg path {
+        fill: $white;
+    }
+}
+.copyright-block {
+    &__image {
+        margin-top: 6px;
+    }
+    &__text {
+        font-family: $font-medium;
+        font-size: 14px;
+        line-height: 28px;
+        color: $white;
+        text-align: center;
+    }
+}
+.contacts {
+    &__upper {
+        display: flex;
+        align-items: center;
+        margin-top: 26px;
+        @include desktop {
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        @include tablet_md {
+            flex-direction: column;
+            align-items: center;
+        }
+        @include tablet {
+            flex-direction: row;
+           justify-content: space-between;
+        }
+        &_location {
+            margin-right: 40px;
+            @include desktop {
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
+            @include tablet {
+                margin-right: 20px;
+            }
+            @include mobile {
+                margin-right: 0px;
+            }
+        }
+        &_number {
+            @include desktop {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__lower {
+        max-width: 196px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.location, .number {
+    margin-bottom: 20px;
+    &__image {
+        margin-right: 10px;
+    }
+    &__link {
+        @include flex(flex-start, center, row);
+        font-family: $font-medium;
+        font-size: 16px;
+        line-height: 28px;
+        color: $white;
+    }
+}

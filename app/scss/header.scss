@@ -1,0 +1,93 @@
+.header {
+    &__wrapper {
+        padding-top: 9px;
+    }
+    &__content {
+        max-width: $max-width;
+        @include flex(space-between, center, row);
+        margin: 0 auto;
+        &_nav-btn {
+            font-family: $font-medium;
+            font-size: 14px;
+            line-height: 17px;
+            color: $white;
+            &:not(:last-child){
+                margin-right: 45px;
+            }
+        }
+        &_nav {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+}
+.burger-menu {
+    position: relative;
+    @media (min-width: 993px){
+        display: none;
+    }
+    &__checkbox {
+        display: none;
+        &:checked ~ .menu__btn > span {
+            transform: rotate(45deg);
+        }
+        &:checked ~ .menu__btn > span:before {
+            top: 0;
+            transform: rotate(0deg);
+        }
+        &:checked ~ .menu__btn > span:after {
+            top: 0;
+            transform: rotate(90deg);
+        }
+        &:checked ~ .menu__box {
+            right: 0;
+            top: 50px;
+            display: block;
+        }
+    }
+}
+.menu__btn {
+    display: flex;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    & span ,
+    & span::before,
+    & span::after {
+        display: block;
+        position: absolute;
+        width: 26px;
+        height: 2px;
+        background: $white;
+    }
+    & span::before {
+        content: '';
+        top: -8px;
+    }
+    & span::after {
+        content: '';
+        top: 8px;
+    }
+}
+.menu__box {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    list-style: none;
+    text-align: end;
+    transition: 0.3s;
+}
+.menu__item {
+    display: block;
+    font-family: $font-medium;
+    font-size: 14px;
+    line-height: 17px;
+    color: $white;
+    text-decoration: none;
+    margin-bottom: 20px;
+    width: 100px;
+    transition: 0.3s;
+}

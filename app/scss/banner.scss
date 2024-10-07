@@ -1,0 +1,42 @@
+@import './var_and_mixins.scss'; // adjust the path as necessary
+   
+.banner {
+    background: url(../images/src/banner_bgr.jpg) no-repeat center/cover;
+    &__wrapper {
+        min-height: calc(100vh - 82px);
+        @include flex(center, center, row);
+    }
+    &__content {
+        max-width: $max-width;
+        @include flex(center, center, column);
+        margin: 0 auto;
+        &_header {
+            @include font($font-bold, 40px, 60px, $white);
+            margin-bottom: 30px;
+            text-align: center;
+            @include tablet {
+                max-width: 80%;
+            }
+            @include mobile{
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+        &_subheader {
+            @include font($font-medium, 30px, 45px, $blue);
+            text-align: center;
+            @include tablet {
+                max-width: 80%;
+            }
+            @include mobile{
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        &_btn {
+            width: 255px;
+            height: 60px;
+            margin-top: 65px;
+        }
+    }
+}

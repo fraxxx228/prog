@@ -1,0 +1,71 @@
+@import  '../../node_modules/swiper/swiper-bundle';
+@import './media_mixins.scss';
+@import './var_and_mixins.scss'; // Определение переменных и миксинов
+@import './fonts.scss'; // Шрифты
+@import './banner.scss'; // Использует переменную $font-bold
+@import './footer.scss';
+@import './header.scss';
+@import './image.scss';
+@import './info.scss';
+@import './media_mixins.scss';
+@import './normalize.scss';
+@import './team.scss';
+
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.subheader {
+    font-family: $font-bold;
+    font-size: 30px;
+    line-height: 45px;
+    color: $black;
+    margin-bottom: 15px;
+    text-align: center;
+    @include mobile {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+.common-text {
+    max-width: 970px;
+    font-family: $font-medium;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 60px;
+    text-align: center;
+    @include tablet_md {
+       max-width: 370px;
+    }
+    @include mobile {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+.common-btn {
+    background: $blue;
+    @include flex(center, center, row);
+    transition: 0.3s;
+    &:hover {
+        border: 1px solid $blue;
+        background: rgba(255, 255, 255, 0.3);
+    }
+    &__link {
+        font-family: $font-black;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        padding: 7%;
+        text-align: center;
+        color: $black;
+        &:hover {
+            color: $blue;
+        }
+     }
+}
